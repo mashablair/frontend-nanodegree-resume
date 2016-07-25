@@ -14,3 +14,4 @@ console.log(funThoughts);
 
 var sophieThoughts = "Sophie is AWESOME".replace("AWESOME", "adorable");
 console.log(sophieThoughts);
+
