@@ -1,19 +1,32 @@
+//bio object - basic info
+var bio = {
+    "name": "Maria Blair",
+    "role": "Front-End Web Developer",
+    //object:
+    "contact info" {
+        "email": "mashablair@gmail.com",
+        "cell": "805-636-6461",
+        "github": "mashablair",
+        "location": "Santa Barbara, CA",
+        "twitter": "mashablair"
+    },
+    //end of object
+    "picture": "images/fry.jpg",
+    "welcome message": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code.  This is my first JavaScript project: an interactive online resume that is easy to customize.",
+    "skills": [
+        "programming", "HTML", "CSS", "JavaScript", "Bootstrap", "Sublime Text"
+    ],
+};
+
 // $("#main").append("Maria Blair");
+// this will test if things are working
 
-// var firstName = "Maria";
-// var age = 35;
-// var awesomeThoughts = "I am Maria and I am AWESOME! :)";
-// console.log(firstName);
-// console.log(age);
-// console.log(awesomeThoughts);
+// function that displays info from the bio object on the page:
+bio.displays = function() {
 
-// var fun = ("FUN");
+// Basic header info - name, title, contact info, image
 
-// var funThoughts = awesomeThoughts.replace("AWESOME", fun);
-// console.log(funThoughts);
-
-// var sophieThoughts = "Sophie is AWESOME".replace("AWESOME", "adorable");
-// console.log(sophieThoughts);
+};
 
 var name = "Maria Blair";
 var role = "Front-End Web Developer";
@@ -26,23 +39,8 @@ $("#header").append(formattedName);
 $("#header").append(formattedRole);
 
 
-var bio = {
-    "name": "Maria Blair",
-    "role": "Front-End Web Developer",
-    //object:
-    "contact info": {
-        "email": "mashablair@gmail.com",
-        "cell": "805-636-6461",
-        "github": "mashablair",
-        "location": "Santa Barbara, CA",
-        "twitter": "mashablair"
-    },
-    //end of object
-    "picture": "images/fry.jpg",
-    "welcome message": "Welcome to my online resume site!",
-    "skills": [
-        "programming", "HTML", "CSS", "JavaScript", "Bootstrap", "Sublime Text"
-    ],
-};
+
+
+var formattedPic = HTMLbioPic.replace("%data%", picture);
 $("#main").append(bio);
 
