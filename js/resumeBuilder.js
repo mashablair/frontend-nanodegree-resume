@@ -14,6 +14,8 @@ var bio = {
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery"]
 };
 
+
+
 // Bio function that displays info from the bio object:
 function displayBio() {
 
@@ -137,3 +139,15 @@ var education = {
         }
     ]
 };
+
+//FUNCTION to Internationalize Names:
+function inName(name) {
+    name = name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+
+    return name[0] +" "+name[1];
+}
+
+$('#main').append(internationalizeButton);
