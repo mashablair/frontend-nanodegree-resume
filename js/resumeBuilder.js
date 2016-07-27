@@ -7,7 +7,7 @@ var bio = {
         "mobile": "777-777-7777",
         "github": "mashablair",
         "location": "Santa Barbara, CA",
-        "twitter": "mashablair"
+        "twitter": "@mashablair"
     },
     "biopic": "images/fry.jpg",
     "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code.  This is my first JavaScript project: an interactive online resume that is easy to customize.",
@@ -19,11 +19,24 @@ bio.display = function() {
 
 // header info - name, title, image
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("header").prepend(formattedRole);
+    $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedPic);
+
+    if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+        $("#skills").append(formattedSkill);
+        formattedSkill = HTMLskills.replace("%data%, bio.skills[1]");
+        $("#skills").append(formattedSkill);
+            formattedSkill = HTMLskills.replace("%data%, bio.skills[2]");
+        $("#skills").append(formattedSkill);
+            formattedSkill = HTMLskills.replace("%data%, bio.skills[3]");
+        $("#skills").append(formattedSkill);
+    }
 };
 
 // education object
