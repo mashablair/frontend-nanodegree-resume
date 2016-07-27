@@ -43,7 +43,7 @@ displayBio();
 
 
 
-// work object  -- DOESN'T DISPLAY!
+// work object
 var work = {
     "jobs": [
         {
@@ -63,7 +63,7 @@ var work = {
     ]
 };
 
-// Work function displayWork() with for-in loop: -- DOESN'T DISPLAY!
+// Work function displayWork() with for-in loop:
 function displayWork() {
     for (job in work.jobs) {
         // create new div for work experience
