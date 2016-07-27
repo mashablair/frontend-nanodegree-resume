@@ -4,7 +4,7 @@ var bio = {
     "role": "Front-End Web Developer",
     "contacts": {
         "email": "mashablair@gmail.com",
-        "mobile": "805-636-6461",
+        "mobile": "777-777-7777",
         "github": "mashablair",
         "location": "Santa Barbara, CA",
         "twitter": "mashablair"
