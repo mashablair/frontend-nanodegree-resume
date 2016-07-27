@@ -15,7 +15,7 @@ var bio = {
 };
 
 // function that displays info from the bio object on the page:
-var displayFunc = function() {
+function displayBio() {
 
 // header info - name, title, image
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -39,7 +39,7 @@ var displayFunc = function() {
     }
 }
 
-displayFunc();
+displayBio();
 
 // education object
 var education = {
