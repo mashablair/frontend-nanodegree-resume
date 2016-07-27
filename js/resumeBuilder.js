@@ -2,27 +2,100 @@
 var bio = {
     "name": "Maria Blair",
     "role": "Front-End Web Developer",
-    "contact info" {
+    "contacts": {
         "email": "mashablair@gmail.com",
-        "cell": "805-636-6461",
+        "mobile": "805-636-6461",
         "github": "mashablair",
         "location": "Santa Barbara, CA",
         "twitter": "mashablair"
     },
-    "pic": "images/fry.jpg",
-    "welcome message": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code.  This is my first JavaScript project: an interactive online resume that is easy to customize.",
-    "skills": ["programming", "HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
+    "biopic": "images/fry.jpg",
+    "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code.  This is my first JavaScript project: an interactive online resume that is easy to customize.",
+    "skills": ["programming", "HTML", "CSS", "JavaScript", "Awesomeness", "jQuery"]
 };
 
 // function that displays info from the bio object on the page:
 bio.display = function() {
 
-// Basic header info - name, title, image
+// header info - name, title, image
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
-    var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedPic);
+};
+
+// education object
+var education = {
+    "schools": [
+        {
+            "name": "Russian State University",
+            "city": "Kaliningrad, Russia",
+            "degree": "MS",
+            "major": ["Linguistics", "Communication"],
+            "dates": 2003
+        },
+        {
+            "name": "UCSB",
+            "city": "Santa Barbara, CA, US",
+            "degree": "Certificate",
+            "major": "Paralegal Studies",
+            "dates": 2006
+        }
+    ]
+,
+    "onlioneCourses": [
+        {
+            "title": "Front-End Web Developer",
+            "school": "Udacity",
+            "url": "http://www.udacity.com",
+            "dates": 2016
+        },
+        {
+            "title": "WordPress Web Developer",
+            "school": "Skillcrush",
+            "url": "http://www.skillcrush.com",
+            "dates": 2016
+        }
+    ]
+};
+
+// work object
+var work = {
+    "jobs": [
+        {
+            "employer": "EG Technologies",
+            "title": "Web Development Intern",
+            "location": "Santa Barbara, CA",
+            "description": ["Collaborate with Project Managers on developing WordPress websites based on website design and customized using HTML, CSS and PHP", "Perform website optimization and QA testing"],
+            "dates": 2016
+        },
+        {
+            "employer": "Freudenberg Medical LLC",
+            "title": "Marketing Research Analyst",
+            "location": "Santa Barbara, CA",
+            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan", "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations"],
+            "dates": 2015
+        }
+    ]
+};
+
+//projects object
+var projects = {
+    "projects": [
+        {
+            "title": "Portfolio",
+            "description": ["Created a responsive portfolio of future work", "Technologies used: HTML, CSS, Bootstrap"],
+            "dates": 2016,
+            "images": "images/xxxx.jpg"
+        },
+        {
+            "title": "Animal Trading Card",
+            "description": ["Created an eye-pleasing trading card", "Technologies used: HTML, CSS"],
+            "dates": 2016,
+            "images": "images/xxxx.jpg"
+        }
+    ]
 };
 
