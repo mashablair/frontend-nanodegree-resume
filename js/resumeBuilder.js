@@ -9,13 +9,13 @@ var bio = {
         "location": "Santa Barbara, CA",
         "twitter": "@mashablair"
     },
-    "biopic": "images/fry.jpg",
+    "biopic": "images/masha.png",
     "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code.  This is my first JavaScript project: an interactive online resume that is easy to customize.",
-    "skills": ["programming", "HTML", "CSS", "JavaScript", "Awesomeness", "jQuery"]
+    "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery"]
 };
 
 // function that displays info from the bio object on the page:
-bio.display = function() {
+var displayFunc = function() {
 
 // header info - name, title, image
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -30,14 +30,16 @@ bio.display = function() {
 
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
         $("#skills").append(formattedSkill);
-        formattedSkill = HTMLskills.replace("%data%, bio.skills[1]");
+        formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
         $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%, bio.skills[2]");
+            formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
         $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%, bio.skills[3]");
+            formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
         $("#skills").append(formattedSkill);
     }
-};
+}
+
+displayFunc();
 
 // education object
 var education = {
@@ -113,6 +115,8 @@ function displayWork() {
         $(".work-entry:last").append(formattedDescription);
     }
 }
+
+displayWork();
 
 //projects object
 var projects = {
