@@ -17,7 +17,7 @@ var bio = {
 
 
 // Bio function that displays info from the bio object:
-function displayBio() {
+bio.display = function() {
 
 // header info - name, title, image
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -39,9 +39,12 @@ function displayBio() {
             formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
         $("#skills").append(formattedSkill);
     }
-}
 
-displayBio();
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    $("#topContacts").append(formattedMobile);
+};  //we added a display method to the bio object (aka encapsulation)
+
+bio.display();
 
 
 
@@ -52,7 +55,9 @@ var work = {
             "employer": "EG Technologies",
             "title": "Web Development Intern",
             "location": "Santa Barbara, CA",
-            "description": ["Collaborate with Project Managers on developing WordPress websites based on website design and customized using HTML, CSS and PHP", "Perform website optimization and QA testing"],
+            "description": ["Collaborate with Project Managers on developing" +
+            "WordPress websites based on website design and customized using HTML," +
+            "CSS and PHP", "Perform website optimization and QA testing"],
             "dates": 2016
         },
         {
