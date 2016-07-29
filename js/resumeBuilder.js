@@ -17,6 +17,7 @@ var bio = {
 
 
 // Bio function that displays info from the bio object:
+//We added a display method to the bio object (aka encapsulation)
 bio.display = function() {
 
 // header info - name, title, image
@@ -32,17 +33,29 @@ bio.display = function() {
 
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
         $("#skills").append(formattedSkill);
-        formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
         $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
         $("#skills").append(formattedSkill);
-            formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
         $("#skills").append(formattedSkill);
     }
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts").append(formattedMobile);
-};  //we added a display method to the bio object (aka encapsulation)
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    $("#topContacts").append(formattedEmail);
+    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+    $("#topContacts").append(formattedTwitter);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    $("#topContacts").append(formattedGithub);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    $("#topContacts").append(formattedLocation);
+
+    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedWelcomeMessage);
+
+};
 
 bio.display();
 
@@ -56,8 +69,8 @@ var work = {
             "title": "Web Development Intern",
             "location": "Santa Barbara, CA",
             "description": ["Collaborate with Project Managers on developing" +
-            "WordPress websites based on website design and customized using HTML," +
-            "CSS and PHP", "Perform website optimization and QA testing"],
+                "WordPress websites based on website design and customized using HTML," +
+                "CSS and PHP. ", "Perform website optimization and QA testing."],
             "dates": 2016
         },
         {
