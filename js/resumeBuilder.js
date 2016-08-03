@@ -186,6 +186,26 @@ var education = {
     ]
 };
 
+education.display = function() {
+    for (school in schools.schools) {
+        $("#education").append(HTMLschoolStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+        $(".project-entry:last").append(formattedImage);
+    }
+};
+
+projects.display();
+
 //FUNCTION to Internationalize Names:
 function inName(name) {
     name = name.trim().split(" ");
@@ -197,3 +217,6 @@ function inName(name) {
 }
 
 $('#main').append(internationalizeButton);
+
+//you want to see a map?
+$("#mapDiv").append(googleMap);
