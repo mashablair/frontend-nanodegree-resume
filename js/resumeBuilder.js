@@ -112,16 +112,33 @@ var projects = {
             "title": "Portfolio",
             "description": ["Created a responsive portfolio of future work", "Technologies used: HTML, CSS, Bootstrap"],
             "dates": 2016,
-            "images": "images/xxxx.jpg"
+            // "images": "images/xxxx.jpg"
         },
         {
             "title": "Animal Trading Card",
             "description": ["Created an eye-pleasing trading card", "Technologies used: HTML, CSS"],
             "dates": 2016,
-            "images": "images/xxxx.jpg"
+            // "images": "images/xxxx.jpg"
         }
     ]
 };
+
+projects.display = function() {
+    for (project in projects.projects) {
+        $("#projects").append(HTMLprojectsStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDates = HTMLprojectDate.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+    }
+};
+
+projects.display();
 
 // education object
 var education = {
