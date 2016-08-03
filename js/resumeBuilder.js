@@ -172,13 +172,13 @@ var education = {
 ,
     "onlineCourses": [
         {
-            "title": "Front-End Web Developer",
+            "title": "Front-End Web Development",
             "school": "Udacity",
             "url": "http://www.udacity.com",
             "dates": 2016
         },
         {
-            "title": "WordPress Web Developer",
+            "title": "WordPress Web Development",
             "school": "Skillcrush",
             "url": "http://www.skillcrush.com",
             "dates": 2016
@@ -191,10 +191,9 @@ education.display = function() {
         $("#education").append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-        $(".education-entry:last").append(formattedName);
-
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-        $(".education-entry:last").append(formattedDegree);
+        var formattedNameDegree = formattedName + formattedDegree;
+        $(".education-entry:last").append(formattedNameDegree);
 
         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
@@ -214,10 +213,9 @@ education.display = function() {
         $(".education-entry:last").append(HTMLonlineClasses);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);
-        $(".education-entry:last").append(formattedTitle);
-
         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[school].school);
-        $(".education-entry:last").append(formattedSchool);
+        var formattedTitleSchool = formattedTitle + formattedSchool;
+        $(".education-entry:last").append(formattedTitleSchool);
 
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates);
         $(".education-entry:last").append(formattedOnlineDates);
