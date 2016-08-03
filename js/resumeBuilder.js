@@ -125,12 +125,12 @@ var projects = {
 
 projects.display = function() {
     for (project in projects.projects) {
-        $("#projects").append(HTMLprojectsStart);
+        $("#projects").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
 
-        var formattedDates = HTMLprojectDate.replace("%data%", projects.projects[project].dates);
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
 
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
