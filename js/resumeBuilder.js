@@ -110,15 +110,23 @@ var projects = {
     "projects": [
         {
             "title": "Portfolio",
-            "description": ["Created a responsive portfolio of future work", "Technologies used: HTML, CSS, Bootstrap"],
-            "dates": 2016,
-            // "images": "images/xxxx.jpg"
+            "description": ["Created a responsive portfolio for FUTURE work. ", "Technologies used: HTML, CSS, Bootstrap."],
+            "dates": "July, 2016",
+            "images": "images/portfolio.png"
         },
         {
             "title": "Animal Trading Card",
-            "description": ["Created an eye-pleasing trading card", "Technologies used: HTML, CSS"],
-            "dates": 2016,
-            // "images": "images/xxxx.jpg"
+            "description": ["First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. ", "Technologies used: HTML, CSS."],
+            "dates": "June, 2016",
+            "images": "images/animal-card.png"
+        },
+        {
+            "title": "WordPress WebSite",
+            "description": ["Created and customized a website for an imaginary marketing company. ",
+            "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, ",
+            "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. ", "Technologies used: WordPress, HTML, CSS."],
+            "dates": "June, 2016",
+            "images": "images/accelerate.png"
         }
     ]
 };
@@ -135,6 +143,9 @@ projects.display = function() {
 
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
+
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+        $(".project-entry:last").append(formattedImage);
     }
 };
 
