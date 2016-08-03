@@ -170,7 +170,7 @@ var education = {
         }
     ]
 ,
-    "onlioneCourses": [
+    "onlineCourses": [
         {
             "title": "Front-End Web Developer",
             "school": "Udacity",
@@ -187,24 +187,47 @@ var education = {
 };
 
 education.display = function() {
-    for (school in schools.schools) {
+    for (school in education.schools) {
         $("#education").append(HTMLschoolStart);
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-        $(".project-entry:last").append(formattedTitle);
+        var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+        $(".education-entry:last").append(formattedName);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-        $(".project-entry:last").append(formattedDates);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        $(".education-entry:last").append(formattedDegree);
 
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $(".project-entry:last").append(formattedDescription);
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+        $(".education-entry:last").append(formattedDates);
 
-        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-        $(".project-entry:last").append(formattedImage);
+        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+        $(".education-entry:last").append(formattedLocation);
+
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+        $(".education-entry:last").append(formattedMajor);
     }
 };
 
-projects.display();
+education.display();
+
+education.display = function() {
+    for (school in education.onlineCourses) {
+        $(".education-entry:last").append(HTMLonlineClasses);
+
+        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);
+        $(".education-entry:last").append(formattedTitle);
+
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[school].school);
+        $(".education-entry:last").append(formattedSchool);
+
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates);
+        $(".education-entry:last").append(formattedOnlineDates);
+
+        var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[school].url);
+        $(".education-entry:last").append(formattedURL);
+    }
+};
+
+education.display();
 
 //FUNCTION to Internationalize Names:
 function inName(name) {
