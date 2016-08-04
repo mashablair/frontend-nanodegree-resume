@@ -161,14 +161,16 @@ var education = {
             "location": "Kaliningrad, Russia",
             "degree": "MS",
             "major": ["Linguistics", "Communication"],
-            "dates": 2003
+            "dates": "2003",
+            "url": "https://eng.kantiana.ru/"
         },
         {
             "name": "UCSB",
             "location": "Santa Barbara, CA, US",
             "degree": "Certificate",
             "major": "Paralegal Studies",
-            "dates": 2006
+            "dates": "2006",
+            "url": "http://extension.ucsb.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=17012725&utm_campaign=par"
         }
     ]
 ,
@@ -177,13 +179,13 @@ var education = {
             "title": "Front-End Web Development",
             "school": "Udacity",
             "url": "http://www.udacity.com",
-            "dates": 2016
+            "dates": "2016"
         },
         {
             "title": "WordPress Web Development",
             "school": "Skillcrush",
             "url": "http://www.skillcrush.com",
-            "dates": 2016
+            "dates": "2016"
         }
     ]
 };
