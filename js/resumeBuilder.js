@@ -79,17 +79,18 @@ var work = {
             "employer": "EG Technologies",
             "title": "Web Development Intern",
             "location": "Santa Barbara, CA",
+            "dates": "2016",
             "description": ["Collaborate with Project Managers on developing" +
                 "WordPress websites based on website design and customized using HTML," +
-                "CSS and PHP. ", "Perform website optimization and QA testing."],
-            "dates": 2016
+                "CSS and PHP. ", "Perform website optimization and QA testing."]
         },
         {
             "employer": "Freudenberg Medical LLC",
             "title": "Marketing Research Analyst",
             "location": "Ventura, CA",
-            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan", "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations"],
-            "dates": 2015
+            "dates": "2015",
+            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan" +
+            "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations"]
         }
     ]
 };
@@ -133,7 +134,8 @@ var projects = {
             "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, ",
             "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. ", "Technologies used: WordPress, HTML, CSS."],
             "dates": "June, 2016",
-            "images": "images/accelerate.png"
+            "images": ["images/accelerate.png", "images/accelerate-1.png",
+                "images/accelerate-2.png"]
         }
     ]
 };
