@@ -63,7 +63,7 @@ var work = {
         {
             "employer": "Freudenberg Medical LLC",
             "title": "Marketing Research Analyst",
-            "location": "Santa Barbara, CA",
+            "location": "Ventura, CA",
             "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan", "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations"],
             "dates": 2015
         }
@@ -132,14 +132,14 @@ var education = {
     "schools": [
         {
             "name": "Russian State University",
-            "city": "Kaliningrad, Russia",
+            "location": "Kaliningrad, Russia",
             "degree": "MS",
             "major": ["Linguistics", "Communication"],
             "dates": 2003
         },
         {
             "name": "UCSB",
-            "city": "Santa Barbara, CA, US",
+            "location": "Santa Barbara, CA, US",
             "degree": "Certificate",
             "major": "Paralegal Studies",
             "dates": 2006
@@ -171,7 +171,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedName + formattedDegree);
 
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
-        $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].city));
+        $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].major));
     }
 };
