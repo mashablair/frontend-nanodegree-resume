@@ -136,6 +136,10 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
+    locations.push(placesLived.location);
+    locations.push(placesLived1.location);
+    locations.push(placesLived2.location);
+
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
@@ -251,7 +255,7 @@ window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-// window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});

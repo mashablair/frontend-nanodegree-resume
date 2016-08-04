@@ -14,6 +14,18 @@ var bio = {
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery"]
 };
 
+var placesLived = {
+    "location": "Orlando, FL"
+};
+
+var placesLived1 = {
+    "location": "New York, NY"
+};
+
+var placesLived2 = {
+    "location": "Baltimore, MD"
+}
+
 
 
 // Bio function that displays info from the bio object:
