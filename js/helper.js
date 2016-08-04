@@ -57,6 +57,7 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
+var twitterFeed = '<div id="twitter"><a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#FAB81E" href="https://twitter.com/mashablair">Tweets by Maria Blair</a></div>'
 
 //Collecting Click Locations:
 $(document).click(function(loc) {
