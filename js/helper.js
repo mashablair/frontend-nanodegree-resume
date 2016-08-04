@@ -140,6 +140,10 @@ function initializeMap() {
     locations.push(placesLived1.location);
     locations.push(placesLived2.location);
 
+    // this loop doesn't work :(
+    // for (var spot in placesLived) {
+    //   locations.push(placesLived[spot].location);
+    // }
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration

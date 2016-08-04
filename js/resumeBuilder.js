@@ -24,7 +24,13 @@ var placesLived1 = {
 
 var placesLived2 = {
     "location": "Baltimore, MD"
-}
+};
+
+// var placesLived = {
+//     "location": "Orlando, FL",
+//     "location": "New York, NY",
+//     "location": "Baltimore, MD"
+// };
 
 
 
@@ -37,20 +43,26 @@ bio.display = function() {
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
-    if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
+    // if (bio.skills.length > 0) {
+    //     $("#header").append(HTMLskillsStart);
 
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
+    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
+    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
+    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
+    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
+    // }
+    //I replaced the above 'if' statement with 'for' loop for skills to iterate through all of them and append them:
+    $("#header").append(HTMLskillsStart);
+    for (var i=0; i<bio.skills.length; i++) {
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+
     }
 
-    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-    $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+    $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+    $("#topContacts, #footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+    $("#topContacts, #footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+    $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
