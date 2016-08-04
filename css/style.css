@@ -24,12 +24,19 @@ h6 {
   padding: 0 5%;
 }
 
+#projects,
+#mapDiv {
+  background-color: #FCE4EC;
+}
+
 h1 {
   font-size: 40px;
   /*color: #f5a623;*/
   color: pink;
   line-height: 48px;
   display: inline;
+  font-family: 'Tangerine', cursive;
+  padding-right: 20px;
 }
 
 h2 {
@@ -62,6 +69,10 @@ h5 {
 
 }
 
+/*Added lightpink background to some divs*/
+/*.pink-divs {
+  background-color: #FCE4EC;
+}*/
 
 .date-text {
   font-style: italic;
@@ -87,7 +98,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #AD1457;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -130,7 +141,8 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #616161;
+/*  background-color: #484848;*/
 }
 
 .flex-box {

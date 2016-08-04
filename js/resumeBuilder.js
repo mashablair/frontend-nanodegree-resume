@@ -81,7 +81,7 @@ var work = {
             "location": "Santa Barbara, CA",
             "dates": "2016",
             "description": ["Collaborate with Project Managers on developing" +
-                "WordPress websites based on website design and customized using HTML," +
+                "WordPress websites based on website design and customized using HTML, " +
                 "CSS and PHP. " + "Perform website optimization and QA testing."]
         },
         {
@@ -118,8 +118,8 @@ var projects = {
     "projects": [
         {
             "title": "Portfolio",
-            "description": ["Created a responsive portfolio for FUTURE work. " +
-                "Technologies used: HTML, CSS, Bootstrap."],
+            "description": ["Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
+                "Technologies used: HTML, CSS, JS, Bootstrap."],
             "dates": "July, 2016",
             "images": ["images/portfolio.png"]
         },
@@ -137,8 +137,8 @@ var projects = {
                 "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
                 "Technologies used: WordPress, HTML, CSS."],
             "dates": "June, 2016",
-            "images": ["images/accelerate.png", "images/accelerate-1.png",
-                "images/accelerate-2.png"]
+            "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
+            // "images": "images/accelerate.png"
         }
     ]
 };
@@ -151,6 +151,10 @@ projects.display = function() {
         $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
         $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
         $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
+
+        // for (var i=0; i < projects.projects.images.length; i++) {
+        //     $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects.images[i].images));
+        // }
     }
 };
 
@@ -165,7 +169,7 @@ var education = {
             "degree": "MS",
             "major": ["Linguistics", "Communication"],
             "dates": "2003",
-            "url": "https://eng.kantiana.ru/"
+            "url": "www.eng.kantiana.ru/"
         },
         {
             "name": "UCSB",
@@ -173,7 +177,7 @@ var education = {
             "degree": "Certificate",
             "major": "Paralegal Studies",
             "dates": "2006",
-            "url": "http://extension.ucsb.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=17012725&utm_campaign=par"
+            "url": "www.tiny.cc/rx4kdy"
         }
     ]
 ,
@@ -181,13 +185,13 @@ var education = {
         {
             "title": "Front-End Web Development",
             "school": "Udacity",
-            "url": "http://www.udacity.com",
+            "url": "www.udacity.com",
             "dates": "2016"
         },
         {
             "title": "WordPress Web Development",
             "school": "Skillcrush",
-            "url": "http://www.skillcrush.com",
+            "url": "www.skillcrush.com",
             "dates": "2016"
         }
     ]
@@ -204,9 +208,10 @@ education.display = function() {
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].major));
+        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.schools[i].url));
     }
+    $("#education").append(HTMLonlineClasses);
     for (var i=0; i < education.onlineCourses.length; i++) {
-        $(".education-entry:last").append(HTMLonlineClasses);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
@@ -218,21 +223,6 @@ education.display = function() {
 };
 
 education.display();
-
-// education.display = function() {
-//     for (var i=0; i < education.onlineCourses.length; i++) {
-//         $(".education-entry:last").append(HTMLonlineClasses);
-
-//         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
-//         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
-//         $(".education-entry:last").append(formattedTitle + formattedSchool);
-
-//         $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
-//         $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
-//     }
-// };
-
-// education.display();
 
 //FUNCTION to Internationalize Names:
 function inName(name) {
