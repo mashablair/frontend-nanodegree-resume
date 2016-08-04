@@ -96,7 +96,7 @@ var work = {
 };
 
 // Work function displayWork() with for loop:
-function displayWork() {
+work.display = function() {
     for (var i=0; i < work.jobs.length; i++) {
         // created new div for work experience
         $("workExperience").append(HTMLworkStart);
@@ -110,7 +110,7 @@ function displayWork() {
     }
 }
 
-displayWork();
+work.display();
 
 
 //projects object
