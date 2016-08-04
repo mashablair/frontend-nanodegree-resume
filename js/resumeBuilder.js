@@ -82,15 +82,15 @@ var work = {
             "dates": "2016",
             "description": ["Collaborate with Project Managers on developing" +
                 "WordPress websites based on website design and customized using HTML," +
-                "CSS and PHP. ", "Perform website optimization and QA testing."]
+                "CSS and PHP. " + "Perform website optimization and QA testing."]
         },
         {
             "employer": "Freudenberg Medical LLC",
             "title": "Marketing Research Analyst",
             "location": "Ventura, CA",
             "dates": "2015",
-            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan" +
-            "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations"]
+            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan. " +
+                "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations."]
         }
     ]
 };
@@ -118,21 +118,24 @@ var projects = {
     "projects": [
         {
             "title": "Portfolio",
-            "description": ["Created a responsive portfolio for FUTURE work. ", "Technologies used: HTML, CSS, Bootstrap."],
+            "description": ["Created a responsive portfolio for FUTURE work. " +
+                "Technologies used: HTML, CSS, Bootstrap."],
             "dates": "July, 2016",
-            "images": "images/portfolio.png"
+            "images": ["images/portfolio.png"]
         },
         {
             "title": "Animal Trading Card",
-            "description": ["First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. ", "Technologies used: HTML, CSS."],
+            "description": ["First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
+                "Technologies used: HTML, CSS."],
             "dates": "June, 2016",
-            "images": "images/animal-card.png"
+            "images": ["images/animal-card.png"]
         },
         {
             "title": "WordPress WebSite",
-            "description": ["Created and customized a website for an imaginary marketing company. ",
-            "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, ",
-            "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. ", "Technologies used: WordPress, HTML, CSS."],
+            "description": ["Created and customized a website for an imaginary marketing company. " +
+                "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
+                "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
+                "Technologies used: WordPress, HTML, CSS."],
             "dates": "June, 2016",
             "images": ["images/accelerate.png", "images/accelerate-1.png",
                 "images/accelerate-2.png"]
@@ -202,11 +205,6 @@ education.display = function() {
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].major));
     }
-};
-
-education.display();
-
-education.display = function() {
     for (var i=0; i < education.onlineCourses.length; i++) {
         $(".education-entry:last").append(HTMLonlineClasses);
 
@@ -220,6 +218,21 @@ education.display = function() {
 };
 
 education.display();
+
+// education.display = function() {
+//     for (var i=0; i < education.onlineCourses.length; i++) {
+//         $(".education-entry:last").append(HTMLonlineClasses);
+
+//         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+//         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+//         $(".education-entry:last").append(formattedTitle + formattedSchool);
+
+//         $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
+//         $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+//     }
+// };
+
+// education.display();
 
 //FUNCTION to Internationalize Names:
 function inName(name) {
