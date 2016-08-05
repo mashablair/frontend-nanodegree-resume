@@ -127,7 +127,7 @@ var projects = {
             "title": "WordPress WebSite",
             "description": ["Created and customized a website for an imaginary marketing company. " +
                 "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
-                "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and crate custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
+                "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
                 "Technologies used: WordPress, HTML, CSS."],
             "dates": "June, 2016",
             "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
