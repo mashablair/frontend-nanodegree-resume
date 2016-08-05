@@ -160,7 +160,7 @@ var education = {
             "name": "Russian State University",
             "location": "Kaliningrad, Russia",
             "degree": "MS",
-            "major": ["Linguistics", "Communication"],
+            "majors": ["Linguistics", " Communication"],
             "dates": "2003",
             "url": "www.eng.kantiana.ru/"
         },
@@ -168,7 +168,7 @@ var education = {
             "name": "UCSB",
             "location": "Santa Barbara, CA, US",
             "degree": "Certificate",
-            "major": "Paralegal Studies",
+            "majors": ["Paralegal Studies"],
             "dates": "2006",
             "url": "www.tiny.cc/rx4kdy"
         }
@@ -200,11 +200,13 @@ education.display = function() {
 
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
-        $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].major));
+        $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors));
         $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.schools[i].url));
     }
+
     $("#education").append(HTMLonlineClasses);
     for (var i=0; i < education.onlineCourses.length; i++) {
+        $("#education").append(HTMLschoolStart);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
         var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
