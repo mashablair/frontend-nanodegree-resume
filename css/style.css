@@ -105,14 +105,16 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
+  font-family: 'Tangerine', cursive;
+  color: #ffc0cb;
+  font-size: 28px;
   line-height: 28px;
 }
 
 #skills-h3 {
   color: pink;
+  font-family: 'Tangerine', cursive;
+  font-size: 25px;
   display: none;
 }
 
