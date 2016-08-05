@@ -44,14 +44,6 @@ bio.display = function() {
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
-    // if (bio.skills.length > 0) {
-    //     $("#header").append(HTMLskillsStart);
-
-    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
-    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
-    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
-    //     $("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
-    // }
     //I replaced the above 'if' statement with 'for' loop for skills to iterate through all of them and append them:
     $("#header").append(HTMLskillsStart);
     for (var i=0; i<bio.skills.length; i++) {
@@ -151,11 +143,11 @@ projects.display = function() {
         $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
         $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
         $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
-        $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
+        // $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
 
-        // for (var i=0; i < projects.projects.images.length; i++) {
-        //     $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects.images[i].images));
-        // }
+        for (var j = 0; j < projects.projects[i].images.length; j++) {
+            $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images[j]));
+        }
     }
 };
 
