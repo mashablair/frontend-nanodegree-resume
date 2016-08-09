@@ -9,6 +9,11 @@ var bio = {
         "location": "Santa Barbara, CA",
         "twitter": "@mashablair"
     },
+    // "placesLived": {
+    //     "location": "Orlando, FL",
+    //     "location": "New York, NY",
+    //     "location": "Baltimore, MD"
+    // },
     "biopic": "images/masha.png",
     "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code. " +
         "This is my first JavaScript project: an interactive online resume that dynamic and is easy to update.",
@@ -26,12 +31,6 @@ var placesLived1 = {
 var placesLived2 = {
     "location": "Baltimore, MD"
 };
-
-// var placesLived = {
-//     "location": "Orlando, FL",
-//     "location": "New York, NY",
-//     "location": "Baltimore, MD"
-// };
 
 
 
