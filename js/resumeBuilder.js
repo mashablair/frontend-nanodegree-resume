@@ -38,14 +38,14 @@ var placesLived2 = {
 //We added a display method to the bio object (aka encapsulation)
 bio.display = function() {
 
-// header info - name, title, image
+    // header info - name, title, image
     $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
     $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
     //I replaced the above 'if' statement with 'for' loop for skills to iterate through all of them and append them:
     $("#header").append(HTMLskillsStart);
-    for (var i=0; i<bio.skills.length; i++) {
+    for (var i = 0; i < bio.skills.length; i++) {
         $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 
     }
@@ -66,30 +66,29 @@ bio.display();
 
 // work object
 var work = {
-    "jobs": [
-        {
-            "employer": "EG Technologies",
-            "title": "Web Development Intern",
-            "location": "Santa Barbara, CA",
-            "dates": "2016",
-            "description": ["Collaborate with Project Managers on developing" +
-                "WordPress websites based on website design and customized using HTML, " +
-                "CSS and PHP. " + "Perform website optimization and QA testing."]
-        },
-        {
-            "employer": "Freudenberg Medical LLC",
-            "title": "Marketing Research Analyst",
-            "location": "Ventura, CA",
-            "dates": "2015",
-            "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan. " +
-                "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations."]
-        }
-    ]
+    "jobs": [{
+        "employer": "EG Technologies",
+        "title": "Web Development Intern",
+        "location": "Santa Barbara, CA",
+        "dates": "2016",
+        "description": ["Collaborate with Project Managers on developing" +
+            "WordPress websites based on website design and customized using HTML, " +
+            "CSS and PHP. " + "Perform website optimization and QA testing."
+        ]
+    }, {
+        "employer": "Freudenberg Medical LLC",
+        "title": "Marketing Research Analyst",
+        "location": "Ventura, CA",
+        "dates": "2015",
+        "description": ["Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan. " +
+            "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations."
+        ]
+    }]
 };
 
 // Work function displayWork() with for loop:
 work.display = function() {
-    for (var i=0; i < work.jobs.length; i++) {
+    for (var i = 0; i < work.jobs.length; i++) {
         // created new div for work experience
         $("workExperience").append(HTMLworkStart);
         //concat employer and title
@@ -100,43 +99,42 @@ work.display = function() {
         $(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[i].dates));
         $(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[i].description));
     }
-}
+};
 
 work.display();
 
 
 //projects object
 var projects = {
-    "projects": [
-        {
-            "title": "Portfolio",
-            "description": ["Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
-                "Technologies used: HTML, CSS, JS, Bootstrap."],
-            "dates": "July, 2016",
-            "images": ["images/portfolio.png"]
-        },
-        {
-            "title": "Animal Trading Card",
-            "description": ["First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
-                "Technologies used: HTML, CSS."],
-            "dates": "June, 2016",
-            "images": ["images/animal-card.png"]
-        },
-        {
-            "title": "WordPress WebSite",
-            "description": ["Created and customized a website for an imaginary marketing company. " +
-                "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
-                "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
-                "Technologies used: WordPress, HTML, CSS."],
-            "dates": "June, 2016",
-            "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
+    "projects": [{
+        "title": "Portfolio",
+        "description": ["Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
+            "Technologies used: HTML, CSS, JS, Bootstrap."
+        ],
+        "dates": "July, 2016",
+        "images": ["images/portfolio.png"]
+    }, {
+        "title": "Animal Trading Card",
+        "description": ["First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
+            "Technologies used: HTML, CSS."
+        ],
+        "dates": "June, 2016",
+        "images": ["images/animal-card.png"]
+    }, {
+        "title": "WordPress WebSite",
+        "description": ["Created and customized a website for an imaginary marketing company. " +
+            "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
+            "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
+            "Technologies used: WordPress, HTML, CSS."
+        ],
+        "dates": "June, 2016",
+        "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
             // "images": "images/accelerate.png"
-        }
-    ]
+    }]
 };
 
 projects.display = function() {
-    for (var i=0; i < projects.projects.length; i++) {
+    for (var i = 0; i < projects.projects.length; i++) {
         $("#projects").append(HTMLprojectStart);
 
         $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
@@ -154,43 +152,36 @@ projects.display();
 
 // education object
 var education = {
-    "schools": [
-        {
-            "name": "Russian State University",
-            "location": "Kaliningrad, Russia",
-            "degree": "MS",
-            "majors": ["Linguistics", " Communication"],
-            "dates": "2003",
-            "url": "www.eng.kantiana.ru/"
-        },
-        {
-            "name": "UCSB",
-            "location": "Santa Barbara, CA, US",
-            "degree": "Certificate",
-            "majors": ["Paralegal Studies"],
-            "dates": "2006",
-            "url": "www.tiny.cc/rx4kdy"
-        }
-    ]
-,
-    "onlineCourses": [
-        {
-            "title": "Front-End Web Development",
-            "school": "Udacity",
-            "url": "www.udacity.com",
-            "dates": "2016"
-        },
-        {
-            "title": "WordPress Web Development",
-            "school": "Skillcrush",
-            "url": "www.skillcrush.com",
-            "dates": "2016"
-        }
-    ]
+    "schools": [{
+        "name": "Russian State University",
+        "location": "Kaliningrad, Russia",
+        "degree": "MS",
+        "majors": ["Linguistics", " Communication"],
+        "dates": "2003",
+        "url": "www.eng.kantiana.ru/"
+    }, {
+        "name": "UCSB",
+        "location": "Santa Barbara, CA, US",
+        "degree": "Certificate",
+        "majors": ["Paralegal Studies"],
+        "dates": "2006",
+        "url": "www.tiny.cc/rx4kdy"
+    }],
+    "onlineCourses": [{
+        "title": "Front-End Web Development",
+        "school": "Udacity",
+        "url": "www.udacity.com",
+        "dates": "2016"
+    }, {
+        "title": "WordPress Web Development",
+        "school": "Skillcrush",
+        "url": "www.skillcrush.com",
+        "dates": "2016"
+    }]
 };
 
 education.display = function() {
-    for (var i=0; i < education.schools.length; i++) {
+    for (var i = 0; i < education.schools.length; i++) {
         $("#education").append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
@@ -204,15 +195,15 @@ education.display = function() {
     }
 
     $("#education").append(HTMLonlineClasses);
-    for (var i=0; i < education.onlineCourses.length; i++) {
+    for (var k = 0; k < education.onlineCourses.length; k++) {
         $("#education").append(HTMLschoolStart);
 
-        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
-        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[k].title);
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[k].school);
         $(".education-entry:last").append(formattedTitle + formattedSchool);
 
-        $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates));
-        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[i].url));
+        $(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[k].dates));
+        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[k].url));
     }
 };
 
@@ -223,9 +214,9 @@ function inName(name) {
     name = name.trim().split(" ");
     console.log(name);
     name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
 
-    return name[0] +" "+name[1];
+    return name[0] + " " + name[1];
 }
 
 $('#main').append(internationalizeButton);
