@@ -57,7 +57,11 @@ var HTMLonlineURL = '<br><a href="#">School Website: %data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
-var twitterFeed = '<div id="twitter"><a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#FAB81E" href="https://twitter.com/mashablair">Tweets by Maria Blair</a></div>'
+
+//from twitter website instructions for displaying twitter timeline feed:
+var twitterFeed = '<a class="twitter-timeline" href="https://twitter.com/mashablair">Tweets by mashablair</a>';
+
+
 
 //Collecting Click Locations:
 $(document).click(function(loc) {
@@ -136,9 +140,10 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
-    locations.push(placesLived.location);
-    locations.push(placesLived1.location);
-    locations.push(placesLived2.location);
+
+    for (var i = 0; i < bio.placesLived.length; i++) {
+      locations.push(bio.placesLived[i]);
+    }
 
     // this loop doesn't work :(
     // for (var spot in placesLived) {

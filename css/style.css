@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry
+#twitterDiv {
   padding: 0 5%;
 }
 
