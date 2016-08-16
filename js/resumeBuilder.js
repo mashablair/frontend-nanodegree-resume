@@ -16,7 +16,7 @@ var bio = {
     ],
     "biopic": "images/masha.png",
     "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code. " +
-        "This is my first JavaScript project: an interactive online resume that dynamic and is easy to update.",
+        "This is my first JavaScript project: an interactive online resume that is dynamic and easy to update.",
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery", "Git/GitHub", "Object-Oriented Programming"]
 };
 

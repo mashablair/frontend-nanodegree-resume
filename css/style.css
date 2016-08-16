@@ -114,10 +114,15 @@ a {
 
 #skills-h3 {
   color: pink;
-/*  font-family: 'Tangerine', cursive;*/
   font-size: 16px;
   display: none;
   font-style: normal;
+}
+
+#skills {
+  margin-bottom: 20px;
+  position: relative;
+  left: -16px;
 }
 
 .orange {
@@ -178,6 +183,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  margin-right: 20px;
 }
 
 img {
