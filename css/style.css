@@ -20,7 +20,7 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry
+.project-entry,
 #twitterDiv {
   padding: 0 5%;
 }
@@ -114,6 +114,7 @@ a {
 
 #skills-h3 {
   color: pink;
+/*  font-family: 'Tangerine', cursive;*/
   font-size: 16px;
   display: none;
   font-style: normal;
