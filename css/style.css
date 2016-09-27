@@ -25,9 +25,13 @@ h6 {
   padding: 0 5%;
 }
 
-#projects,
+#education,
 #mapDiv {
   background-color: #FCE4EC;
+}
+
+#projects {
+  background-color: #f3f3f3;
 }
 
 h1 {
@@ -106,14 +110,15 @@ a {
 }
 
 .welcome-message {
-  font-family: 'Tangerine', cursive;
-  color: #ffc0cb;
-  font-size: 28px;
-  line-height: 28px;
+  /*font-family: 'Tangerine', cursive;*/
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 #skills-h3 {
-  color: pink;
+  color: black;
 /*  font-family: 'Tangerine', cursive;*/
   font-size: 16px;
   display: none;

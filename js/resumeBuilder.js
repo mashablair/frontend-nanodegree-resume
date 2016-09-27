@@ -4,7 +4,7 @@ var bio = {
     "role": "Front-End Web Developer",
     "contacts": {
         "email": "mashablair@gmail.com",
-        "mobile": "777-777-7777",
+        "mobile": "805-636-6461",
         "github": "mashablair",
         "location": "Santa Barbara, CA",
         "twitter": "@mashablair"
@@ -16,7 +16,7 @@ var bio = {
     ],
     "biopic": "images/masha.png",
     "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code. " +
-        "This is my first JavaScript project: an interactive online resume that is dynamic and easy to update.",
+        "This is one of my first JavaScript projects: an interactive online resume that is dynamic and easy to update.",
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery", "Git/GitHub", "Object-Oriented Programming"]
 };
 
@@ -90,49 +90,6 @@ work.display = function() {
 work.display();
 
 
-//projects object
-var projects = {
-    "projects": [{
-        "title": "Portfolio",
-        "description": "Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
-            "Technologies used: HTML, CSS, JS, Bootstrap.",
-        "dates": "July, 2016",
-        "images": ["images/portfolio.png"]
-    }, {
-        "title": "Animal Trading Card",
-        "description": "First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
-            "Technologies used: HTML, CSS.",
-        "dates": "June, 2016",
-        "images": ["images/animal-card.png"]
-    }, {
-        "title": "WordPress WebSite",
-        "description": "Created and customized a website for an imaginary marketing company. " +
-            "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
-            "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
-            "Technologies used: WordPress, HTML, CSS.",
-        "dates": "June, 2016",
-        "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
-            // "images": "images/accelerate.png"
-    }]
-};
-
-projects.display = function() {
-    for (var i = 0; i < projects.projects.length; i++) {
-        $("#projects").append(HTMLprojectStart);
-
-        $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
-        $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
-        $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
-        // $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
-
-        for (var j = 0; j < projects.projects[i].images.length; j++) {
-            $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images[j]));
-        }
-    }
-};
-
-projects.display();
-
 // education object
 var education = {
     "schools": [{
@@ -191,6 +148,52 @@ education.display = function() {
 };
 
 education.display();
+
+
+//projects object
+var projects = {
+    "projects": [{
+        "title": "Portfolio",
+        "description": "Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
+            "Technologies used: HTML, CSS, JS, Bootstrap.",
+        "dates": "July, 2016",
+        "images": ["images/portfolio.png"]
+    }, {
+        "title": "Animal Trading Card",
+        "description": "First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
+            "Technologies used: HTML, CSS.",
+        "dates": "June, 2016",
+        "images": ["images/animal-card.png"]
+    }, {
+        "title": "WordPress WebSite",
+        "description": "Created and customized a website for an imaginary marketing company. " +
+            "Imported their blog from Blooger, fixed the imported images.  Configured WP theme and widget area, created a child theme, created Case Studies using Custom Post Type, " +
+            "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
+            "Technologies used: WordPress, HTML, CSS.",
+        "dates": "June, 2016",
+        "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
+            // "images": "images/accelerate.png"
+    }]
+};
+
+projects.display = function() {
+    for (var i = 0; i < projects.projects.length; i++) {
+        $("#projects").append(HTMLprojectStart);
+
+        $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
+        $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
+        $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
+        // $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
+
+        for (var j = 0; j < projects.projects[i].images.length; j++) {
+            $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images[j]));
+        }
+    }
+};
+
+projects.display();
+
+
 
 //FUNCTION to Internationalize Names:
 function inName(name) {
