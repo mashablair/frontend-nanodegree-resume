@@ -15,8 +15,7 @@ var bio = {
         "Baltimore, MD"
     ],
     "biopic": "images/masha.png",
-    "welcomeMessage": "Hello and welcome to my online resume site!  My name is Maria and I am learning to code. " +
-        "This is one of my first JavaScript projects: an interactive online resume that is dynamic and easy to update.",
+    "welcomeMessage": "Welcome to my online resume site!  My name is Maria and I'm a bright and energetic Front-End and WordPress Developer who is passionate about building scalable, modular and responsive websites.",
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery", "Git/GitHub", "Object-Oriented Programming"]
 };
 
