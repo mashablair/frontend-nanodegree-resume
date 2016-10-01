@@ -16,7 +16,7 @@ var bio = {
     ],
     "biopic": "images/masha.png",
     "welcomeMessage": " ",
-    "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "jQuery", "Git/GitHub", "Angular JS", "Bootstrap", "Grunt"]
+    "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "jQuery", "WordPress", "Angular JS", "Bootstrap", "Grunt"]
 };
 
 
@@ -58,14 +58,13 @@ var work = {
         "title": "Web Development Intern",
         "location": "Santa Barbara, CA",
         "dates": "2016",
-        "description": "Collaborate with Project Managers on developing" +
-            "WordPress websites based on website design and customized using HTML, " +
-            "CSS and PHP. " + "Perform website optimization and QA testing."
+        "description": "Collaborate with Project Managers on developing websites based on website design and customize using HTML, " +
+            "CSS, JS, and PHP. " + "Perform website optimization, maintenance, and QA testing."
     }, {
         "employer": "Freudenberg Medical LLC",
         "title": "Marketing Research Analyst",
         "location": "Ventura, CA",
-        "dates": "2015",
+        "dates": "2014",
         "description": "Reported to the VP, performed industry market analysis and assisted in drafting of the 2015 Business Plan. " +
             "Conducted in-depth data analysis using traditional and advanced methods and prepared reports and PP presentations."
     }]
@@ -110,12 +109,12 @@ var education = {
         "title": "Front-End Web Development",
         "school": "Udacity",
         "url": " ",
-        "dates": "2016"
+        "dates": "2015"
     }, {
         "title": "WordPress Web Development",
         "school": "Skillcrush",
         "url": " ",
-        "dates": "2016"
+        "dates": "2015"
     }]
 };
 
@@ -155,13 +154,13 @@ var projects = {
         "title": "Portfolio",
         "description": "Created a responsive portfolio for FUTURE work. " + "Upon clicking, individual project images pop up with the project description. " +
             "Technologies used: HTML, CSS, JS, Bootstrap.",
-        "dates": "July, 2016",
+        "dates": "July, 2015",
         "images": ["images/portfolio.png"]
     }, {
         "title": "Animal Trading Card",
         "description": "First CSS project: eye-pleasing animal trading card from scratch. Practiced my CSS and design skills. " +
             "Technologies used: HTML, CSS.",
-        "dates": "June, 2016",
+        "dates": "June, 2014",
         "images": ["images/animal-card.png"]
     }, {
         "title": "WordPress WebSite",

@@ -253,3 +253,7 @@ span {
     display: block;
   }
 }
+
+#online {
+  color: grey;
+}
