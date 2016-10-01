@@ -25,14 +25,13 @@ h6 {
   padding: 0 5%;
 }
 
-#education,
 #mapDiv {
-  /*background-color: #FCE4EC;*/
-  background-color: #FFF3E0;
+  background-color: #f3f3f3;;
+  /*background-color: #FFF3E0;*/
 }
 
 #projects {
-  background-color: #f3f3f3;
+  /*background-color: #f3f3f3;*/
 }
 
 h1 {
@@ -141,7 +140,7 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #fff;
 }
 
@@ -199,6 +198,7 @@ img {
 
 span {
   padding: 5px;
+  color: white;
 }
 
 #lets-connect {
@@ -217,6 +217,10 @@ span {
   .biopic {
     width: 175px;
   }
+}
+
+#workExperience {
+  background-color: white;
 }
 
 @media only screen and (max-width: 750px) {
