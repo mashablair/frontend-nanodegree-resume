@@ -170,8 +170,8 @@ var projects = {
             "installed Advanced Custom Fields and displayed them on my pages, added case studies to the homepage and created custom archive, added featured work to the homepage, created a contact page and other content and hero images. " +
             "Technologies used: WordPress, HTML, CSS.",
         "dates": "June, 2016",
-        "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
-            // "images": "images/accelerate.png"
+        // "images": ["images/accelerate.png", "images/accelerate-1.png", "images/accelerate-2.png"]
+        "images": ["images/accelerate-2.png"]
     }]
 };
 
