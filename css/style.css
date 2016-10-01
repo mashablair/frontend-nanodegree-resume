@@ -27,7 +27,8 @@ h6 {
 
 #education,
 #mapDiv {
-  background-color: #FCE4EC;
+  /*background-color: #FCE4EC;*/
+  background-color: #FFF3E0;
 }
 
 #projects {
@@ -37,7 +38,7 @@ h6 {
 h1 {
   font-size: 40px;
   /*color: #f5a623;*/
-  color: pink;
+  color: #f5a623;
   line-height: 48px;
   display: inline;
   font-family: 'Tangerine', cursive;
@@ -53,7 +54,7 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -132,11 +133,11 @@ a {
 }
 
 .orange {
-  background-color: pink;
+  background-color: #f5a623;
 }
 
 .orange-text {
-  color: pink;
+  color: #f5a623;
 }
 
 .white-text {

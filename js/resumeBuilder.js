@@ -15,7 +15,7 @@ var bio = {
         "Baltimore, MD"
     ],
     "biopic": "images/masha.png",
-    "welcomeMessage": "Welcome to my online resume site!  My name is Maria and I'm a bright and energetic Front-End and WordPress Developer who is passionate about building scalable, modular and responsive websites.",
+    "welcomeMessage": "Hi there!  My name is Maria and I am a Web Developer who loves building scalable, modular and responsive websites. This is my online resume coded in JavaScript.",
     "skills": ["Awesomeness", "HTML", "CSS", "JavaScript", "Front-End Web Development", "jQuery", "Git/GitHub", "Object-Oriented Programming"]
 };
 
@@ -109,12 +109,12 @@ var education = {
     "onlineCourses": [{
         "title": "Front-End Web Development",
         "school": "Udacity",
-        "url": "www.udacity.com",
+        "url": " ",
         "dates": "2016"
     }, {
         "title": "WordPress Web Development",
         "school": "Skillcrush",
-        "url": "www.skillcrush.com",
+        "url": " ",
         "dates": "2016"
     }]
 };
@@ -130,7 +130,7 @@ education.display = function() {
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors));
-        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.schools[i].url));
+        // $(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.schools[i].url));
     }
 
     $("#education").append(HTMLonlineClasses);
