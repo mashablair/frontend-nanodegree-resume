@@ -1,6 +1,6 @@
 # Project Details
 
-Link to the live resume: https://mashablair.github.io/frontend-nanodegree-resume/
+## Link to the live resume: https://mashablair.github.io/frontend-nanodegree-resume/
 
 In this project I created my interactive online resume using HTML, CSS and Object-Oriented JavaScript.  The resume data is stored in four JavaScript objects. All of the HTML code needed to build the resume is stored in **js/helper.js** variables. 
 
